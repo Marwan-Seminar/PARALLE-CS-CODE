@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F4C14171-080B-4C69-89E1-8D9620409B5F}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SeminarParallelComputing</RootNamespace>
+    <AssemblyName>SeminarParallelComputing</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="seminar\examples\MatrixMult\Matrix.cs" />
+    <Compile Include="seminar\examples\MatrixMult\MatrixMultParallelFor.cs" />
+    <Compile Include="seminar\examples\MatrixMult\MatrixMultRecursiveDecomposition.cs" />
+    <Compile Include="seminar\examples\MatrixMult\MatrixMultSequential.cs" />
+    <Compile Include="seminar\examples\MatrixMult\MatrixMultTasks.cs" />
+    <Compile Include="seminar\examples\MatrixMult\MatrixMultThreadPool.cs" />
+    <Compile Include="seminar\examples\MatrixMult\MatrixMultThreads.cs" />
+    <Compile Include="seminar\examples\MatrixMult\MatrixRecursiveDecomposition.cs" />
+    <Compile Include="seminar\examples\MatrixMult\TestHelper\dummy.cs" />
+    <Compile Include="seminar\examples\MatrixMult\TestHelper\TestMatrcesMultSequential.cs" />
+    <Compile Include="seminar\examples\MatrixMult\TestHelper\TestMatrices.cs" />
+    <Compile Include="seminar\examples\MatrixMult\TestHelper\TestMatricesMultParallelFor.cs" />
+    <Compile Include="seminar\examples\MatrixMult\TestHelper\TestMatricesMultTasks.cs" />
+    <Compile Include="seminar\examples\MatrixMult\TestHelper\TestMatricesMultThreadPool.cs" />
+    <Compile Include="seminar\examples\MatrixMult\TestHelper\TestMatricesMultThreads.cs" />
+    <Compile Include="seminar\examples\MatrixMult\TestHelper\TestMatricesRecursiveDecomposition.cs" />
+    <Compile Include="seminar\examples\MatrixMult\TestMatrixMultiplication.cs" />
+    <Compile Include="seminar\examples\task\API\AttachParentDemo.cs" />
+    <Compile Include="seminar\examples\task\API\CreateAndStartTask.cs" />
+    <Compile Include="seminar\examples\task\BlockingTasks\BlockingTaskTrivial.cs" />
+    <Compile Include="seminar\examples\task\BlockingTasks\LongrunningTask.cs" />
+    <Compile Include="seminar\examples\task\Fibonacci\Fibonacci.cs" />
+    <Compile Include="seminar\examples\task\Quicksort\Quicksort.cs" />
+    <Compile Include="seminar\examples\thread\FibonacciThread.cs" />
+    <Compile Include="seminar\examples\thread\MonitorUsage.cs" />
+    <Compile Include="seminar\exercises\memorymodel\Ueb_4_1_Volatile.cs" />
+    <Compile Include="seminar\exercises\memorymodel\Ueb_4_2_PetersonsLock.cs" />
+    <Compile Include="seminar\exercises\memorymodel\Ueb_4_3_Atomic.cs" />
+    <Compile Include="seminar\exercises\memorymodel\Ueb_4_5_SpinlockCAS.cs" />
+    <Compile Include="seminar\exercises\task\u3_4_fibonacci_tasks\basis\FibonacciTPL_Basis.cs" />
+    <Compile Include="seminar\exercises\task\u3_4_fibonacci_tasks\solution\FibonacciTPL_Solution.cs" />
+    <Compile Include="seminar\exercises\task\Ueb_3_6_ProducerConsumerTPL.cs" />
+    <Compile Include="seminar\exercises\task\Ueb_3_5_QuicksortMinimalTest.cs" />
+    <Compile Include="seminar\examples\task\Fibonacci\FibonacciTPLMinimal.cs" />
+    <Compile Include="seminar\exercises\task\Ueb_3_2_TrivalTreeTask.cs" />
+    <Compile Include="seminar\exercises\task\Ueb_3_1_HelloWorldTasks.cs" />
+    <Compile Include="seminar\exercises\task\Ueb_3_3_Rekursive_Baeume_Mit_Zeiten.cs" />
+    <Compile Include="seminar\exercises\thread\coordination\u2_6_producer_consumer_monitor\basis\U2_6_ProducerConsumerMonitor_Basis.cs" />
+    <Compile Include="seminar\exercises\thread\coordination\u2_6_producer_consumer_monitor\solution\U2_6_ProducerConsumerMonitor_Solution.cs" />
+    <Compile Include="seminar\exercises\thread\coordination\Ueb_2_5_HelloWorldTakingTurnsMonitor.cs" />
+    <Compile Include="seminar\exercises\thread\parallel\u2_1_hello_world_threads\basis\U_2_1_a_HelloWorldThreads_Basis.cs" />
+    <Compile Include="seminar\exercises\thread\parallel\u2_1_hello_world_threads\basis\U_2_1_b_HelloWorldThreadsTakingTurns_Basis.cs" />
+    <Compile Include="seminar\exercises\thread\parallel\u2_1_hello_world_threads\solution\U_2_1_a_HelloWorldThreads_Solution.cs" />
+    <Compile Include="seminar\exercises\thread\parallel\u2_1_hello_world_threads\solution\U_2_1_b_HelloWorldThreadsTakingTurns_Solution.cs" />
+    <Compile Include="seminar\exercises\thread\parallel\u2_2_quicksort_threads\basis\U2_2_QuicksortParallelThreads_Basis.cs" />
+    <Compile Include="seminar\exercises\thread\parallel\u2_2_quicksort_threads\solution\U2_2_QuicksortParallelThreads_Solution.cs" />
+    <Compile Include="seminar\examples\thread\Ueb_2_3_QuicksortParallelThreadPool.cs" />
+    <Compile Include="seminar\exercises\thread\parallel\u2_3_fibonacci_threads\basis\FibonacciThread_Basis.cs" />
+    <Compile Include="seminar\exercises\thread\parallel\u2_3_fibonacci_threads\solution\FibonacciThread_Solution.cs" />
+    <Compile Include="seminar\exercises\thread\synchronisation\u2_4_stack_unsynchronized\basis\Ueb_2_4_StackUnsynchronized_Basis.cs" />
+    <Compile Include="seminar\exercises\thread\synchronisation\u2_4_stack_unsynchronized\solution\Ueb_2_4_StackUnsynchronized_Solution.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

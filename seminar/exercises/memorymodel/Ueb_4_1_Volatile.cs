@@ -36,7 +36,7 @@ namespace SeminarParallelComputing.seminar.exercises.memorymodel
         {
             while (true)
             {
-                Console.WriteLine("Hit any key to get  set global data to 0");
+                Console.WriteLine("Hit any key to set global data to 0");
                 Console.ReadLine();
                 Console.WriteLine("Global data as seen from writing thread before reset: " + global_data);
                 global_data = 0;

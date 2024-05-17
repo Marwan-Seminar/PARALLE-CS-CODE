@@ -63,7 +63,7 @@ namespace SeminarParallelComputing.seminar.exercises.memorymodel
                 while (true)
                 {
                     i++;
-                    // Synchronization with Peterson: This push thread identifies itself as "0"
+                    // Synchronization with Spinlock: This push thread identifies itself as "0"
                     // 1. COMMENT THE FOLLOWING LINE TO SEE ERRONEOUS BEHAVIOR
                     stack.spinlockCAS.acquire();
                     stack.checkStackInvariant();
@@ -84,7 +84,7 @@ namespace SeminarParallelComputing.seminar.exercises.memorymodel
                     //for(int i = 0; i < 10000; ++i){
                     while (true)
                     {
-                        // Synchronization with Peterson: This push thread identifies itself as "1"
+                        // Synchronization with Spinlock: This push thread identifies itself as "1"
                         // 3. COMMENT THE FOLLOWING LINE TO SEE ERRONEOUS BEHAVIOR
                         stack.spinlockCAS.acquire();
                         int popped = stack.pop();

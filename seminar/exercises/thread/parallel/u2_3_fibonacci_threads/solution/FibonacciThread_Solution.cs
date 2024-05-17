@@ -26,13 +26,13 @@ namespace SeminarParallelComputing.exercises.thread.parallel.u2_3_fibonacci_thre
             Console.WriteLine("Fibonacci Test entered");
 
             // 1. Seqeuntial calculation of Fibonacci
-            RunFibonacciSequntial(fibonacciInputValue);
+            // RunFibonacciSequntial(fibonacciInputValue);
 
             // 2. Threaded calculation of fimonacci, with threshold
-            //RunFibonacciThreaded(fibonacciInputValue);
+            RunFibonacciThreaded(fibonacciInputValue);
 
             // 3. Naive threaded calculation of fibonacci: Crash
-            //RunFibonacciNaive(fibonacciInputValue);
+            // RunFibonacciNaive(fibonacciInputValue);
         }
 
         private static void RunFibonacciSequntial(int fibonacciInputValue)

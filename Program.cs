@@ -41,10 +41,10 @@ namespace SeminarParallelComputing
         // Threads Uebungen
 
             // Uebung 2.1: Hello World Threads
-            U_2_1_a_HelloWorldThreads_Basis.MainTest();
-            //U_2_1_a_HelloWorldThreads_Solution.MainTest();
+            //U_2_1_a_HelloWorldThreads_Basis.MainTest();
+            // U_2_1_a_HelloWorldThreads_Solution.MainTest();
             //U_2_1_b_HelloWorldThreadsTakingTurns_Basis.MainTest();
-            //U_2_1_b_HelloWorldThreadsTakingTurns_Solution.MainTest();
+            // U_2_1_b_HelloWorldThreadsTakingTurns_Solution.MainTest();
             
             // Uebung 2.2 Quicksort 
             //U2_2_QuicksortParallelThreads_Basis.MainQuicksort();
@@ -95,7 +95,7 @@ namespace SeminarParallelComputing
         //LIFE-CODING
             //Ueb_4_2_TestPetersonsLock.MainTest();
             //FibonacciThreadMain.TestFiboMain();
-            //FibonacciTPL_Solution.RunFibonacci();
+            FibonacciTPL_Solution.RunFibonacci();
             //Ueb_2_4_StackUnsynchronized_Basis.MainTest();
             //Ueb_2_4_StackUnsynchronized_Solution.MainTest();
             //AttachParentDemo.TestMain();

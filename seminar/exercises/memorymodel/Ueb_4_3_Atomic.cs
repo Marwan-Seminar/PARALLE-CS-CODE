@@ -21,7 +21,7 @@ namespace SeminarParallelComputing.seminar.exercises.memorymodel
     {
         int globalVariable = 0;
 
-        const int LOOP_COUNT = 50000;
+        const int LOOP_COUNT = 1_000_000;
         
         void incrementNonAtomic()
         {

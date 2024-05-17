@@ -10,13 +10,13 @@ namespace SeminarParallelComputing.seminar.exercises.thread.synchronization.u2_4
 
     /*
 
-        Ü 2.4 Ein unkorrekt synchronisiertes Programm durch synchronisation reparieren. (Stack).
+        Ü 2.4 Ein unkorrekt synchronisiertes Programm durch Synchronisation reparieren. (Stack).
 	
-        a)	Schreiben sie ein Programm, bei dem eine Datenstruktur von zwei nebenläufigen Threads korrumpiert wird. Z.B. ein Stack, 
+        a)	Schreiben Sie ein Programm, bei dem eine Datenstruktur von zwei nebenläufigen Threads korrumpiert wird. Z.B. ein Stack, 
             der einen Pointer auf das oberste Element hat (oder einen Zähler, der definiert, welches das oberste Element ist).  
             Zeigen sie, dass das Programm fehlerhafte Zustände erzeugt. 
      
-        b)	Synchronisieren sie das Programm korrekt und zeigen Sie, dass es nun  korrekt läuft.
+        b)	Synchronisieren sie das Programm korrekt und zeigen Sie, dass es nun korrekt läuft.
 	
         Lernziel: Risiken der unkorrekten Synchronisation verstehen, Gegenmaßnahmen finden.
 

@@ -152,7 +152,7 @@ namespace SeminarParallelComputing.exercises.task.u3_4_fibonacci_tasks.solution
             else
             {
                 // This is the sequential path, it is taken if the argument is "small"
-                // Interstingly, if I implement the recursion logic within this method, the code becomes very slow.
+                // Interestingly, if I implement the recursion logic within this method, the code becomes very slow.
                 // Maybe this is related to the Lamda Expressions in the parallel path.
                 // As a workaround I use the class FibonacciSequential
                 return (new FibonacciSequential()).FibonacciAlgorithm(arg);

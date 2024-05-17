@@ -52,7 +52,7 @@ namespace SeminarParallelComputing.seminar.exercises.memorymodel
             // Here alternatives for 
 
             // 1. MEMORY BARRIER
-            //Thread.MemoryBarrier(); 
+            Thread.MemoryBarrier(); 
 
             int loopCount = 0;
             while ((turn == otherProccess) && (interested[otherProccess] == true))

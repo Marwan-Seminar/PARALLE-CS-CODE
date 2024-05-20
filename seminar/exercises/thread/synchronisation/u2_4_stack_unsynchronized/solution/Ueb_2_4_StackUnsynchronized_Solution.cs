@@ -119,7 +119,10 @@ namespace SeminarParallelComputing.seminar.exercises.thread.synchronization.u2_4
     }
 
 
-
+    /*
+     * This class contains the test code for the stack datastructure. 
+     * It starts threads that push to and pop from the stack
+     */
     public class Ueb_2_4_StackUnsynchronized_Solution
     {
 
@@ -146,18 +149,15 @@ namespace SeminarParallelComputing.seminar.exercises.thread.synchronization.u2_4
         // Simultaneously pushes and pops.
         void pudhAndPopMT()
         {
+            // THE central Stack datastructure
             Stack stack = new Stack();
 
+            // Push-Thread
             Thread pushThread = new Thread(() =>
             {
-                /*
-                for (int i = 0; i < 100000; ++i)
-                {
-                   stack.checkStackInvariant();
-                   stack.push(i);
-                }
-                */
+                
 
+                // Push onto Stack in infinite Loop
                 int i = 0;
                 while (true)
                 {
@@ -169,10 +169,21 @@ namespace SeminarParallelComputing.seminar.exercises.thread.synchronization.u2_4
                         Console.WriteLine("Pushed " + i);
                     }
                 }
+
+                // finite variant
+                /*
+                for (int i = 0; i < 100000; ++i)
+                {
+                   stack.checkStackInvariant();
+                   stack.push(i);
+                }
+                */
             });
 
+            // Pop-Thread
             Thread popThread = new Thread(() =>
             {
+                // Pop off from Stack in an infinite loop
                 while (true)
                 {                
 
@@ -206,6 +217,9 @@ namespace SeminarParallelComputing.seminar.exercises.thread.synchronization.u2_4
         }
 
 
+
+        //////////////////////////////////////// VARIANTS /////////////////////////////////////////////////
+        
         void fillAndCheckST()
         {
 

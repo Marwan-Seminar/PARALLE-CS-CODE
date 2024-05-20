@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 
+// Dieses Beispiel funktioniert auf meinen Mac mit M1 Chip nicht!
 namespace SeminarParallelComputing.seminar.exercises.memorymodel
 {
     // volatile nötig damit beide Threads die selben Daten sehen. 
@@ -34,8 +35,8 @@ namespace SeminarParallelComputing.seminar.exercises.memorymodel
 
         void WritingMethod()
         {
-            while (true)
-            {
+           while (true){
+                Thread.Sleep(5000); // Hack, weil in meiner VS Mac Mono Umgebung das Read-Line nicht blockiert.
                 Console.WriteLine("Hit any key to set global data to 0");
                 Console.ReadLine();
                 Console.WriteLine("Global data as seen from writing thread before reset: " + global_data);

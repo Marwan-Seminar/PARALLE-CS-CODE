@@ -27,6 +27,15 @@ using SeminarParallelComputing.seminar.exercises.thread.synchronization.u2_4_sta
 using SeminarParallelComputing.seminar.exercises.thread.synchronization.u2_4_stack_unsynchronized.solution;
 using SeminarParallelComputing.exercises.task.u3_4_fibonacci_tasks.basis;
 using SeminarParallelComputing.exercises.task.u3_4_fibonacci_tasks.solution;
+using TPLTaskProgramming.AsynchAwait.AA_Speedup.AASpeedupBlocking;
+using TPLTaskProgramming.AsynchAwait.AA_Speedup.AASpeedupCPUIntensiveJob;
+using TPLTaskProgramming.AsynchAwait;//
+using SeminarParallelComputing.exercises.async.u_5_1_syntax_behaviour.soluition;
+using SeminarParallelComputing.exercises.async.u_5_1_syntax_behaviour.basis;
+using SeminarParallelComputing.exercises.async.u_5_2_async_performance.solution;
+using SeminarParallelComputing.exercises.async.u_5_2_async_performance.basis;
+using SeminarParallelComputing.exercises.task.u_3_7_parallel_for.solution;
+using SeminarParallelComputing.seminar.exercises.task.u_3_7_parallel_for.basis;
 
 namespace SeminarParallelComputing
 {
@@ -36,20 +45,20 @@ namespace SeminarParallelComputing
         {
             Console.WriteLine("Seminar Parallel Programming, Marwan Abu-Khalil 2012");
 
-        // UEBUNGEN
+            // UEBUNGEN
 
-        // Threads Uebungen
+            // 2 THREAD UEBUNGEN
 
             // Uebung 2.1: Hello World Threads
             //U_2_1_a_HelloWorldThreads_Basis.MainTest();
-            // U_2_1_a_HelloWorldThreads_Solution.MainTest();
+            U_2_1_a_HelloWorldThreads_Solution.MainTest();
             //U_2_1_b_HelloWorldThreadsTakingTurns_Basis.MainTest();
-            // U_2_1_b_HelloWorldThreadsTakingTurns_Solution.MainTest();
-            
+            //U_2_1_b_HelloWorldThreadsTakingTurns_Solution.MainTest();
+
             // Uebung 2.2 Quicksort 
             //U2_2_QuicksortParallelThreads_Basis.MainQuicksort();
             //U2_2_QuicksortParallelThreads_Solution.MainQuicksort();
-            
+
             // Uebung 2.3 Fibonacci Threads
             //FibonacciThreadMain_Basis.TestFiboMain();
             //FibonacciThreadMain_Solution.TestFiboMain();
@@ -59,30 +68,40 @@ namespace SeminarParallelComputing
             //Ueb_2_4_StackUnsynchronized_Solution.MainTest();
 
             //Ueb_2_5_HelloWorldTakingTurnsMonitor.TestMain();
-            
+
             // Uebung 2.6 Producer Consumer
             //U2_6_ProducerConsumerMonitor_Basis.TestMain();
             //U2_6_ProducerConsumerMonitor_Solution.TestMain();
-            
-        // Tasks Uebungen
+
+            // 3 TASK UEBUNGEN
             //Ueb_3_1_HelloWorldTasks.TestMain();
             //Ueb_3_2_TrivalTreeTask.MainTest();
             //Ueb_3_3_Rekursive_Baeume_Mit_Zeiten.TestMain();
-            
+
             // Uebung 3.4 Fibonacci with TPL Tasks
             //FibonacciTPL_Basis.RunFibonacci();
             //FibonacciTPL_Solution.RunFibonacci();
-            
+
             //Ueb_3_5_QuicksortMinimalTest.TestMain();
             //Ueb_3_6_ProducerConsumerTPL.TestMain();
+            //Ueb_3_7_ParallelForBasis.TestMain();
+            //Ueb_3_7_ParallelForSolution.TestMain();
 
-         // Memorymodel Uebungen
+
+
+            // 4 MEMORYMODELL UEBUNGEN
             //Ueb_4_1_Volatile.TestMain();
             //Ueb_4_2_TestPetersonsLock.MainTest();
             //Ueb_4_3_Atomic.TestMain();
             //Ueb_4_5_TestSpinlockCAS.MainTest();
-        
-        // Examples
+
+            // 5 ASYNC AWAIT UEBUNGEN
+            //AsyncAwaitBehaviourBasis.TestMain();
+            //AsyncAwaitBehaviourSolution.TestMain();
+            //AsyncAwaitSpeedupBlockingBasis.MainTest();
+            //AsyncAwaitSpeedupBlockingSolution.MainTest();
+
+            //EXAMPLES
             //MonitorUsage.TestBehavior();
             //FibonacciTPL.RunFibonacci();
             //CreateAndStartTask.TestMain();
@@ -91,11 +110,15 @@ namespace SeminarParallelComputing
             //IOAction.TestMain();
             //TestMatrixMultiplication.TestMain();
             //QuicksortTPLTestMain.TestMain();
+            //EXAMPLES: ASYNC / AWAIT
+            // AsynchAwaitBehaviour.TestMain();
+            // AASpeedupBlockingCalls.MainTest();
+            // AASpeedupCPUIntensive.MainTest();
 
-        //LIFE-CODING
+            //LIFE-CODING
             //Ueb_4_2_TestPetersonsLock.MainTest();
             //FibonacciThreadMain.TestFiboMain();
-            FibonacciTPL_Solution.RunFibonacci();
+            //FibonacciTPL_Solution.RunFibonacci();
             //Ueb_2_4_StackUnsynchronized_Basis.MainTest();
             //Ueb_2_4_StackUnsynchronized_Solution.MainTest();
             //AttachParentDemo.TestMain();

@@ -31,14 +31,13 @@ namespace SeminarParallelComputing.seminar.exercises.thread.synchronization.u2_4
             1. lock(ein geeingnets Objekt){ ...}
             oder 
             2. [MethodImplAttribute(MethodImplOptions.Synchronized)]
-        
-
 
      */
 
+
+
     /*
-     * This class creates inconsistent states and Errors if not synchronized.
-     * To make the program correct make sure the three methods marked with "TODO" are synchronized against each other.
+     * This implementation of a  Stack datastructure creates inconsistent states and Errors if not synchronized correctly
      */
     class Stack
     {
@@ -114,7 +113,10 @@ namespace SeminarParallelComputing.seminar.exercises.thread.synchronization.u2_4
     }
 
 
-
+    /*
+    * This class contains the test code for the stack datastructure. 
+    * It starts threads that push to and pop from the stack
+    */
     public class Ueb_2_4_StackUnsynchronized_Basis
     {
 
@@ -141,18 +143,14 @@ namespace SeminarParallelComputing.seminar.exercises.thread.synchronization.u2_4
         // Simultaneously pushes and pops.
         void pudhAndPopMT()
         {
+            // THE central Stack datastructure
             Stack stack = new Stack();
 
+            // Push-Thread
             Thread pushThread = new Thread(() =>
             {
-                /*
-                for (int i = 0; i < 100000; ++i)
-                {
-                   stack.checkStackInvariant();
-                   stack.push(i);
-                }
-                */
 
+                // Push onto Stack in infinite Loop
                 int i = 0;
                 while (true)
                 {
@@ -164,10 +162,22 @@ namespace SeminarParallelComputing.seminar.exercises.thread.synchronization.u2_4
                         Console.WriteLine("Pushed " + i);
                     }
                 }
+
+                // finite variant
+                /*
+                    for (int i = 0; i < 100000; ++i)
+                    {
+                       stack.checkStackInvariant();
+                       stack.push(i);
+                    }
+                */
+
             });
 
+            // Pop-Thread
             Thread popThread = new Thread(() =>
             {
+                // Pop off from Stack in an infinite loop
                 while (true)
                 {
                     int poppedValue = 0;
@@ -199,7 +209,8 @@ namespace SeminarParallelComputing.seminar.exercises.thread.synchronization.u2_4
             Console.WriteLine("TEST-RESULT pudhAndPopMT(): SUCCESS");
         }
 
-
+        /// ////////////////////////////////////// VARIANTS OF THE TEST CODE //////////////////////////
+        
         void fillAndCheckST()
         {
 

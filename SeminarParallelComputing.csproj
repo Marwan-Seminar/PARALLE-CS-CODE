@@ -10,8 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SeminarParallelComputing</RootNamespace>
     <AssemblyName>SeminarParallelComputing</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -26,7 +25,6 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <PlatformTarget>x86</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
@@ -96,8 +94,31 @@
     <Compile Include="seminar\exercises\thread\parallel\u2_3_fibonacci_threads\solution\FibonacciThread_Solution.cs" />
     <Compile Include="seminar\exercises\thread\synchronisation\u2_4_stack_unsynchronized\basis\Ueb_2_4_StackUnsynchronized_Basis.cs" />
     <Compile Include="seminar\exercises\thread\synchronisation\u2_4_stack_unsynchronized\solution\Ueb_2_4_StackUnsynchronized_Solution.cs" />
+    <Compile Include="seminar\examples\asyncawait\AA_library_calls\AAFileAccess.cs" />
+    <Compile Include="seminar\examples\asyncawait\AA_Speedup\AASpeedupCPUIntensiveJob.cs" />
+    <Compile Include="seminar\examples\asyncawait\AA_Speedup\AASpeedupBlockingJob.cs" />
+    <Compile Include="seminar\examples\asyncawait\AA_behaviour\AsynchAwaitBehaviour.cs" />
+    <Compile Include="seminar\exercises\async\u_5_1_syntax_behaviour\basis\AsynchAwaitBehaviourBasis.cs" />
+    <Compile Include="seminar\exercises\async\u_5_1_syntax_behaviour\solution\AsynchAwaitBehaviourSolution.cs" />
+    <Compile Include="seminar\exercises\async\u_5_2_async_performance\basis\AASpeedupBlockingBasis.cs" />
+    <Compile Include="seminar\exercises\async\u_5_2_async_performance\solution\AASpeedupBlockingSolution.cs" />
+    <Compile Include="seminar\exercises\task\u_3_7_parallel_for\solution\ParallelForSolution.cs" />
+    <Compile Include="seminar\exercises\task\u_3_7_parallel_for\basis\Ueb_3_7_ParallelForBasis.cs" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Folder Include="seminar\examples\asyncawait\" />
+    <Folder Include="seminar\exercises\async\" />
+    <Folder Include="seminar\exercises\async\u_5_1_syntax_behaviour\" />
+    <Folder Include="seminar\exercises\async\u_5_1_syntax_behaviour\basis\" />
+    <Folder Include="seminar\exercises\async\u_5_1_syntax_behaviour\solution\" />
+    <Folder Include="seminar\exercises\async\u_5_2_async_performance\" />
+    <Folder Include="seminar\exercises\async\u_5_2_async_performance\basis\" />
+    <Folder Include="seminar\exercises\async\u_5_2_async_performance\solution\" />
+    <Folder Include="seminar\exercises\task\u_3_7_parallel_for\" />
+    <Folder Include="seminar\exercises\task\u_3_7_parallel_for\basis\" />
+    <Folder Include="seminar\exercises\task\u_3_7_parallel_for\solution\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
